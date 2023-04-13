@@ -19,7 +19,7 @@
 <h4 class"text-center">CARDS</h4>
 <div class="container text-center " th:each="emp: ${card.empleado}">
     <div class="row shadow p-3 mb-5 bg-body rounded" >
-        <div class="col bg-vino text-black" >
+        <div class="col bg-vino text-white" >
             <img class="rounded mx-auto d-block" th:src="${emp.foto}" width="200px">
             <h2 class="fw-bold text-uppercase" th:text="${emp.nombrecompleto}"></h2>
             <p class="fs-5 text-uppercase" th:text="${emp.cargo}"></p>
@@ -27,16 +27,22 @@
             <small class="border fs-6 text-capitaliz p-1" th:text="${card.nombempresa}"></small>
               <p class="fs-6 text-uppercase"></p>
             <div class="cuadro">
-            <i class="fas fa-envelope" style="color: rgb(192, 192, 192);"></i> 
+            <a href="https://es-la.facebook.com/" class="fab fa-facebook" style="color: rgb(192, 192, 192);"></a> 
+            
+            </div> 
+            <div class="cuadro">
+            <a href="https://twitter.com/" class="fab fa-twitter" style="color: rgb(192, 192, 192);"></a> 
             </div>
-           
-            <br>
-            <br>
+            
+             <div class="cuadro">
+            <a href="https://google.com/" class="fab fa-google" style="color: rgb(192, 192, 192);"></a> 
+            </div>
+          
         </div>
         <div class="col bg-light text-dark">
-        <div style="border: 1px solid rgb(192, 192, 192); padding: 10px; width: 200px; background-color: lightblue;">
+        <div style="border: 1px solid rgb(192, 192, 192); padding: 10px; width: 200px; background-color: rgb(255, 128, 128);">
   <h6 class="fw-bold">
-    <i class="fas fa-user text-primary" style="color: blue;"></i> 
+    <i class="fa-solid fa-user" style="color: rgb(255, 255, 255)"></i> 
     <h5 class="fw-bold text-uppercase">MIS DATOS</h5>
   </h6>
   <p class="fs-6 text-uppercase"></p>
@@ -48,38 +54,38 @@
         <p class="fs-6 text-uppercase"></p>
         
         <h6 class="fw-bold ">
-       <i class="fa-solid fa-user text-primary" style="color: blue;"></i>  <span class="fw-bold"> Nombre:</span>  <span th:text="${emp.nombrecompleto}" class="fw-normal"></span>
+       <i class="fa-solid fa-user text-primary" style="color: rgb(255, 0, 0);"></i>  <span class="fw-bold"> Nombre:</span>  <span th:text="${emp.nombrecompleto}" class="fw-normal"></span>
         </h6>
         
          <p class="fs-5 text-uppercase"></p>
           <p class="fs-5 text-uppercase"></p>
         
          <h6 class="fw-bold">
-        <i class="fa-solid fa-city text-primary" style="color: blue;"></i> <span class="fw-bold"> Ciudad:</span>  <span th:text="${emp.ciudad}" class="fw-normal"></span>
+        <i class="fa-solid fa-city text-primary" style="color: rgb(255, 0, 0);"></i> <span class="fw-bold"> Ciudad:</span>  <span th:text="${emp.ciudad}" class="fw-normal"></span>
         </h6>
         
          <p class="fs-5 text-uppercase"></p>
         
         <h6 class="fw-bold ">
-        <i class="fa-solid fa-clock text-primary" style="color: blue;"></i> <span class="fw-bold"> Horarios:</span>  <span th:text="${emp.horarios}" class="fw-normal"></span>
+        <i class="fa-solid fa-clock text-primary" style="color: rgb(255, 0, 0);"></i> <span class="fw-bold"> Horarios:</span>  <span th:text="${emp.horarios}" class="fw-normal"></span>
         </h6>
         
          <p class="fs-5 text-uppercase"></p>
        
        <h6 class="fw-bold ">
-        <i class="fa-solid fa-envelope text-primary" style="color: blue;"></i> <span class="fw-bold"> Correo:</span>  <span th:text="${emp.correo}" class="fw-normal"></span>
+        <i class="fa-solid fa-envelope text-primary" style="color: rgb(255, 0, 0);"></i> <span class="fw-bold"> Correo:</span>  <span th:text="${emp.correo}" class="fw-normal"></span>
         </h6>
         
          <p class="fs-5 text-uppercase"></p>
         
            <h6 class="fw-bold ">
-        <i class="fa-solid fa-mobile text-primary" style="color: blue;" ></i> <span class="fw-bold"> Celular:</span>  <span th:text="${emp.celular}" class="fw-normal"></span>
+        <i class="fa-solid fa-mobile text-primary" style="color: rgb(255, 0, 0);" ></i> <span class="fw-bold"> Celular:</span>  <span th:text="${emp.celular}" class="fw-normal"></span>
         </h6>
         
          <p class="fs-5 text-uppercase"></p>
         
           <h6 class="fw-bold ">
-        <i class="fa-solid fa-globe text-primary" style="color: blue;"></i> <span class="fw-bold"> Página Web:</span>  <span th:text="${card.paginaweb}" class="fw-normal"></span>
+        <i class="fa-solid fa-globe text-primary" style="color: rgb(255, 0, 0);"></i> <span class="fw-bold"> Página Web:</span>  <span th:text="${card.paginaweb}" class="fw-normal"></span>
         </h6>
        
         </div>
