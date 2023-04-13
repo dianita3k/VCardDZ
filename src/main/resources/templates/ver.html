@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>TRABAJO CARDS</title>
+   
+     <link th:href="@{/index.css}" rel="stylesheet" href="../static/index.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="../static/index.css">
+    <script src="https://kit.fontawesome.com/e1d55cc160.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
+
+  
+</head>
+<body >
+
+<h4 class"text-center">CARDS</h4>
+<div class="container text-center " th:each="emp: ${card.empleado}">
+    <div class="row shadow p-3 mb-5 bg-body rounded" >
+        <div class="col bg-vino text-black" >
+            <img class="rounded mx-auto d-block" th:src="${emp.foto}" width="200px">
+            <h2 class="fw-bold text-uppercase" th:text="${emp.nombrecompleto}"></h2>
+            <p class="fs-5 text-uppercase" th:text="${emp.cargo}"></p>
+            <p class="fs-6 text-capitaliz" th:text="${emp.ciudad}"></p>
+            <small class="border fs-6 text-capitaliz p-1" th:text="${card.nombempresa}"></small>
+              <p class="fs-6 text-uppercase"></p>
+            <div class="cuadro">
+            <i class="fas fa-envelope" style="color: rgb(192, 192, 192);"></i> 
+            </div>
+           
+            <br>
+            <br>
+        </div>
+        <div class="col bg-light text-dark">
+        <div style="border: 1px solid rgb(192, 192, 192); padding: 10px; width: 200px; background-color: lightblue;">
+  <h6 class="fw-bold">
+    <i class="fas fa-user text-primary" style="color: blue;"></i> 
+    <h5 class="fw-bold text-uppercase">MIS DATOS</h5>
+  </h6>
+  <p class="fs-6 text-uppercase"></p>
+</div>
+		
+        <p class="fs-6 text-uppercase"></p>
+        <p class="fs-6 text-uppercase"></p>
+       
+        <p class="fs-6 text-uppercase"></p>
+        
+        <h6 class="fw-bold ">
+       <i class="fa-solid fa-user text-primary" style="color: blue;"></i>  <span class="fw-bold"> Nombre:</span>  <span th:text="${emp.nombrecompleto}" class="fw-normal"></span>
+        </h6>
+        
+         <p class="fs-5 text-uppercase"></p>
+          <p class="fs-5 text-uppercase"></p>
+        
+         <h6 class="fw-bold">
+        <i class="fa-solid fa-city text-primary" style="color: blue;"></i> <span class="fw-bold"> Ciudad:</span>  <span th:text="${emp.ciudad}" class="fw-normal"></span>
+        </h6>
+        
+         <p class="fs-5 text-uppercase"></p>
+        
+        <h6 class="fw-bold ">
+        <i class="fa-solid fa-clock text-primary" style="color: blue;"></i> <span class="fw-bold"> Horarios:</span>  <span th:text="${emp.horarios}" class="fw-normal"></span>
+        </h6>
+        
+         <p class="fs-5 text-uppercase"></p>
+       
+       <h6 class="fw-bold ">
+        <i class="fa-solid fa-envelope text-primary" style="color: blue;"></i> <span class="fw-bold"> Correo:</span>  <span th:text="${emp.correo}" class="fw-normal"></span>
+        </h6>
+        
+         <p class="fs-5 text-uppercase"></p>
+        
+           <h6 class="fw-bold ">
+        <i class="fa-solid fa-mobile text-primary" style="color: blue;" ></i> <span class="fw-bold"> Celular:</span>  <span th:text="${emp.celular}" class="fw-normal"></span>
+        </h6>
+        
+         <p class="fs-5 text-uppercase"></p>
+        
+          <h6 class="fw-bold ">
+        <i class="fa-solid fa-globe text-primary" style="color: blue;"></i> <span class="fw-bold"> Página Web:</span>  <span th:text="${card.paginaweb}" class="fw-normal"></span>
+        </h6>
+       
+        </div>
+    </div>
+</div>
+</body>
+</html>
